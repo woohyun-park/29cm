@@ -7,6 +7,9 @@ enum Image {
   icons = imgIcons,
 }
 
+const SEARCH = 0;
+const CART = 1;
+
 function Header() {
   const Root = styled.div`
     width: 100%;
@@ -29,29 +32,22 @@ function Header() {
     justify-content: space-between;
   `;
 
-  const Search = styled.div`
+  const Button = styled.div`
     width: 24px;
     height: 24px;
     background: url(${Image.icons});
     background-size: 48px 48px;
-    background-position: 0 0;
-  `;
-
-  const Cart = styled.div`
-    width: 24px;
-    height: 24px;
-    background-image: url(${Image.icons});
-    background-size: 48px 48px;
-    background-position: -24px 0;
-    margin-left: 16px;
+    background-position: ${(props) =>
+      props.type === SEARCH ? "0 0" : props.type === CART ? "-24px 0" : 0};
+    margin-left: ${(props) => (props.type === CART ? "16px" : 0)};
   `;
 
   return (
     <Root>
       <Logo src={Image.logo} />
       <Cont>
-        <Search />
-        <Cart />
+        <Button type={SEARCH} />
+        <Button type={CART} />
       </Cont>
     </Root>
   );
