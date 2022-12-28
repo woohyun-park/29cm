@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function ImageCard({ info }) {
+function FeedItemBanner({ info }) {
   const Root = styled.div`
     width: 100%;
     display: flex;
@@ -20,4 +20,4 @@ function ImageCard({ info }) {
   );
 }
 
-export default ImageCard;
+export default FeedItemBanner;

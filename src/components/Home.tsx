@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import CombCard from "./CombCard";
-import ImageCard from "./ImageCard";
+import FeedItemMagazine from "./FeedItemMagazine";
+import FeedItemBanner from "./FeedItemBanner";
 
-const imageCards = [
+const feedItemBanners = [
   {
     image:
       "https://img.29cm.co.kr/next-contents/2022/12/27/1ccdb45b236f4c2e863b4553bb093f79_20221227161757.jpg?width=1000",
@@ -17,12 +17,32 @@ const imageCards = [
   },
 ];
 
-const combCards = [
+const feedItemMagazines = [
   {
     title: "지금이 기회예요",
     text: "패턴과 그래픽이 돋보이는 유즈의 겨울 신상품 할인 혜택은 오늘 종료됩니다. 이 기회를 놓치지 마세요. 단독 5% 할인",
     image:
       "https://img.29cm.co.kr/next-edition/2022/12/27/e245bc1e23584773888445c8fed3e4c9_20221227165008.jpg?width=500",
+    items: [
+      {
+        brand: "유즈",
+        name: "[29CM 단독]_PIGMENT DOUBLE GRAPHIC WARMER T-SHIRT - GRAY",
+        price: 74000,
+        sale: 0.95,
+        like: 92,
+        image:
+          "https://img.29cm.co.kr/next-product/2022/12/12/4d031e0ef1ed406ba3e4c0d03652dc48_20221212175959.png?width=150",
+      },
+      {
+        brand: "유즈",
+        name: "[29CM 단독]_COLOR BLOCK V-NECK RAGLAN TOP - CHARCOAL",
+        price: 89000,
+        sale: 0.95,
+        like: 52,
+        image:
+          "https://img.29cm.co.kr/next-product/2022/12/12/b4eb9940b08c497c8f748dd1f3522e54_20221212182543.png?width=150",
+      },
+    ],
   },
   {
     title: "스포티보다는 캐주얼하게",
@@ -45,11 +65,11 @@ function Home() {
 
   return (
     <Root>
-      {imageCards.map((each) => (
-        <ImageCard info={each} />
+      {feedItemBanners.map((each) => (
+        <FeedItemBanner info={each} />
       ))}
-      {combCards.map((each) => (
-        <CombCard info={each} />
+      {feedItemMagazines.map((each) => (
+        <FeedItemMagazine info={each} />
       ))}
     </Root>
   );

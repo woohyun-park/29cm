@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { isTemplateSpan } from "typescript";
+import ImageBox from "./ImageBox";
+import ProductList from "./ProductList";
 
-function CombCard({ info }) {
+function FeedItemMagazine({ info }) {
   const Root = styled.div`
     width: 100%;
     display: flex;
@@ -9,22 +12,6 @@ function CombCard({ info }) {
   `;
   const Cont = styled.div`
     width: 90%;
-  `;
-  const ImageCont = styled.div`
-    position: relative;
-    &:after {
-      position: absolute;
-      bottom: 29px;
-      left: -20px;
-      width: 40px;
-      height: 4px;
-      background: #000;
-      content: "";
-    }
-  `;
-  const Image = styled.img`
-    margin-top: 10%;
-    width: 100%;
   `;
   const ContentCont = styled.div`
     width: 95%;
@@ -46,16 +33,15 @@ function CombCard({ info }) {
   return (
     <Root>
       <Cont>
-        <ImageCont>
-          <Image src={info.image} />
-        </ImageCont>
+        <ImageBox src={info.image} />
         <ContentCont>
           <Title>{info.title}</Title>
           <Text>{info.text}</Text>
         </ContentCont>
+        {info.items && info.items.map((each) => <ProductList info={each} />)}
       </Cont>
     </Root>
   );
 }
 
-export default CombCard;
+export default FeedItemMagazine;
