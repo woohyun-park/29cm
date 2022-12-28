@@ -22,6 +22,7 @@ function Header() {
     justify-content: space-between;
     position: sticky;
     top: 0;
+    z-index: 900;
   `;
 
   const Logo = styled.img`
