@@ -1,5 +1,5 @@
 import React from "react";
-import Tomato from "../component/Tomato";
+import Tomato from "../components/Tomato";
 
 export default {
   title: "Tomato",
