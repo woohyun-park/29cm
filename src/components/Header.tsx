@@ -7,8 +7,8 @@ enum Image {
   icons = imgIcons,
 }
 
-const SEARCH = 0;
-const CART = 1;
+const SEARCH: number = 0;
+const CART: number = 1;
 
 function Header() {
   const Root = styled.div`
