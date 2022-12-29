@@ -1,12 +1,13 @@
 import styled from "styled-components";
-import imgIcons from "../imgs/headerIcons.png";
-import NavIcon from "./NavIcon";
+import NavCategory from "./NavCategory";
 
-const HOME = 0;
-const SHOP = 1;
-const TV = 2;
-const WELOVE = 3;
-const MY = 4;
+enum Category {
+  HOME = 0,
+  SHOP = 1,
+  TV = 2,
+  WELOVE = 3,
+  MY = 4,
+}
 
 function Nav() {
   const Root = styled.div`
@@ -19,10 +20,10 @@ function Nav() {
 
   return (
     <Root>
-      <NavIcon type={HOME} selected />
-      <NavIcon type={SHOP} />
-      <NavIcon type={WELOVE} />
-      <NavIcon type={MY} />
+      <NavCategory type={Category.HOME} selected />
+      <NavCategory type={Category.SHOP} />
+      <NavCategory type={Category.WELOVE} />
+      <NavCategory type={Category.MY} />
     </Root>
   );
 }

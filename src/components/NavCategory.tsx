@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import imgIcons from "../imgs/navIcons.png";
+import imgCategories from "../imgs/navCategories.png";
 
-function NavIcon({ type, selected }) {
+function NavCategory({ type, selected }) {
   function getPosition() {
     let result = "";
     result += type === 0 ? "0" : "-" + type * 56;
@@ -14,7 +14,7 @@ function NavIcon({ type, selected }) {
     width: 56px;
     height: 56px;
     margin: 0 auto;
-    background: ${"url(" + imgIcons + ")"};
+    background: ${"url(" + imgCategories + ")"};
     line-height: 100em;
     background-size: 280px;
     vertical-align: top;
@@ -24,4 +24,4 @@ function NavIcon({ type, selected }) {
   return <Root></Root>;
 }
 
-export default NavIcon;
+export default NavCategory;

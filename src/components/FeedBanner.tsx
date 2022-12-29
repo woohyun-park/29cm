@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-function FeedItemBanner({ info }) {
+function FeedBanner({ info }) {
   const Root = styled.div`
     width: 100%;
     display: flex;
@@ -20,4 +20,4 @@ function FeedItemBanner({ info }) {
   );
 }
 
-export default FeedItemBanner;
+export default FeedBanner;

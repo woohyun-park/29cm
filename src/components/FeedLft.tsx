@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import { isTemplateSpan } from "typescript";
 import ImageBox from "./ImageBox";
 import ProductList from "./ProductList";
 
-function FeedItemMagazine({ info }) {
+function FeedLft({ info }) {
   const Root = styled.div`
     width: 100%;
     display: flex;
@@ -44,4 +43,4 @@ function FeedItemMagazine({ info }) {
   );
 }
 
-export default FeedItemMagazine;
+export default FeedLft;

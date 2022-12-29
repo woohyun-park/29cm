@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import FeedItemMagazine from "./FeedItemMagazine";
-import FeedItemBanner from "./FeedItemBanner";
+import FeedLft from "./FeedLft";
+import FeedBanner from "./FeedBanner";
 
-const feedItemBanners = [
+const feedBanners = [
   {
     image:
       "https://img.29cm.co.kr/next-contents/2022/12/27/1ccdb45b236f4c2e863b4553bb093f79_20221227161757.jpg?width=1000",
@@ -17,7 +17,7 @@ const feedItemBanners = [
   },
 ];
 
-const feedItemMagazines = [
+const feedLfts = [
   {
     title: "지금이 기회예요",
     text: "패턴과 그래픽이 돋보이는 유즈의 겨울 신상품 할인 혜택은 오늘 종료됩니다. 이 기회를 놓치지 마세요. 단독 5% 할인",
@@ -65,11 +65,11 @@ function Home() {
 
   return (
     <Root>
-      {feedItemBanners.map((each) => (
-        <FeedItemBanner info={each} />
+      {feedBanners.map((each) => (
+        <FeedBanner info={each} />
       ))}
-      {feedItemMagazines.map((each) => (
-        <FeedItemMagazine info={each} />
+      {feedLfts.map((each) => (
+        <FeedLft info={each} />
       ))}
     </Root>
   );
