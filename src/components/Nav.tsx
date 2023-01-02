@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import NavCategory from "./NavCategory";
 
@@ -10,6 +11,8 @@ enum Category {
 }
 
 function Nav() {
+  let location = useLocation();
+  console.log(location);
   const Root = styled.div`
     height: 66px;
     background: #efefef;
@@ -20,10 +23,22 @@ function Nav() {
 
   return (
     <Root>
-      <NavCategory type={Category.HOME} selected />
-      <NavCategory type={Category.SHOP} />
-      <NavCategory type={Category.WELOVE} />
-      <NavCategory type={Category.MY} />
+      <NavCategory
+        type={Category.HOME}
+        selected={location.pathname === "/home"}
+      />
+      <NavCategory
+        type={Category.SHOP}
+        selected={location.pathname === "/shop"}
+      />
+      <NavCategory
+        type={Category.WELOVE}
+        selected={location.pathname === "/welove"}
+      />
+      <NavCategory
+        type={Category.MY}
+        selected={location.pathname === "/mypage"}
+      />
     </Root>
   );
 }

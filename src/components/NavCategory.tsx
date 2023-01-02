@@ -1,5 +1,8 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import imgCategories from "../imgs/navCategories.png";
+
+const Category = ["home", "shop", "tv", "welove", "mypage"];
 
 function NavCategory({ type, selected }) {
   function getPosition() {
@@ -10,7 +13,7 @@ function NavCategory({ type, selected }) {
     return result;
   }
   const position = getPosition();
-  const Root = styled.div`
+  const Root = styled.a`
     width: 56px;
     height: 56px;
     margin: 0 auto;
@@ -21,7 +24,7 @@ function NavCategory({ type, selected }) {
     background-position: ${position};
   `;
 
-  return <Root></Root>;
+  return <Root href={Category[type]}></Root>;
 }
 
 export default NavCategory;
