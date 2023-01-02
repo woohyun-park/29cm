@@ -13,7 +13,7 @@ function FeedLft({ info }) {
     width: 90%;
   `;
   const ContentCont = styled.div`
-    width: 95%;
+    width: 90%;
     word-break: keep-all;
   `;
   const Title = styled.h2`
